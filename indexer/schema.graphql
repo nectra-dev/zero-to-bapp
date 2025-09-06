@@ -1,0 +1,7 @@
+type Deposit @entity {
+  id: ID!
+  user: String!
+  amount: BigInt!
+  timestamp: Int!
+  transactionHash: String!
+}

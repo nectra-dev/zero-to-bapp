@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer-demo
+description: Envio Indexer Demo
+
+contracts:
+  - name: Vault
+    handler: src/handlers.ts
+    events:
+      - event: Deposited(address indexed user, uint256 amount)
+
+field_selection:
+  transaction_fields:
+    - "hash"
+    - "from"
+    - "to"
+    - "value"              # optional, include what you need
+    - "input"              # if you want calldata
+    - "transactionIndex"   # optional
+
+networks:
+- id: 5115
+  start_block: 15102043
+  contracts:
+  - name: Vault
+    address:
+    - 0xa7a7f3064007f143ce9ae136b2139f1B5E1008e5
+
+unordered_multichain_mode: false
