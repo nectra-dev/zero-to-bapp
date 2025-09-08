@@ -1,0 +1,14 @@
+.env
+
+# contracts
+contracts/cache/
+contracts/out/
+contracts/broadcast/
+
+# indexer
+indexer/node_modules/
+indexer/generated/
+
+# frontend
+frontend/node_modules/
+
